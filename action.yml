@@ -1,0 +1,22 @@
+name: 'Azure Pages DevTest'
+description: 'SimpleDeploy'
+inputs:
+  azure_pages_api_token:
+    description: 'Azure Pages Api Token'
+    required: true
+    default: ''
+  action:
+    description: 'Action to perform'
+    required: true
+    default: 'upload'
+  app_artifact_location:
+    description: 'Location of App Artifacts'
+    required: false
+    default: 'app'
+  api_artifact_location:
+    description: 'Location of Api Artifacts'
+    required: false
+    default: 'api'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
