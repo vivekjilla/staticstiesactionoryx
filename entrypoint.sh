@@ -40,7 +40,7 @@ fi
 
 cd /bin/staticsites/
 if [ SHOULD_BUILD_FUNCTION]; then
-     dotnet StaticSitesClient.dll $INPUT_ACTION --verbose=true --app="/github/staticsitesoutput/app/build" --api="/github/staticsitesoutput/api"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --verbose=true --app="/github/staticsitesoutput/app/$INPUT_APP_BUILD_OUTPUT_LOCATION" --api="/github/staticsitesoutput/api"
 else
-     dotnet StaticSitesClient.dll $INPUT_ACTION --verbose=true --app="/github/staticsitesoutput/app/build"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --verbose=true --app="/github/staticsitesoutput/app/$INPUT_APP_BUILD_OUTPUT_LOCATION"
 fi;
