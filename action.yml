@@ -9,22 +9,22 @@ inputs:
     description: 'Action to perform'
     required: true
     default: 'upload'
-  app_artifact_location:
-    description: 'Location of App Artifacts'
-    required: false
-    default: 'app'
-  api_artifact_location:
-    description: 'Location of Api Artifacts'
-    required: false
-    default: 'api'
   app_source_location:
     description: 'Location of App Source Files to Build'
     required: false
     default: 'app'
   api_source_location:
-    description: 'Location of App Source Files to Build'
+    description: 'Location of Api Source Files to Build'
     required: false
     default: 'api'
+  app_artifact_location:
+    description: 'Location of App Artifacts'
+    required: false
+    default: ''
+  api_artifact_location:
+    description: 'Location of Api Artifacts'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
