@@ -17,6 +17,14 @@ inputs:
     description: 'Location of Api Artifacts'
     required: false
     default: 'api'
+  app_source_location:
+    description: 'Location of App Source Files to Build'
+    required: false
+    default: 'app'
+  api_source_location:
+    description: 'Location of App Source Files to Build'
+    required: false
+    default: 'api'
 runs:
   using: 'docker'
   image: 'Dockerfile'
