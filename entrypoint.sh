@@ -1,4 +1,9 @@
 #!/bin/sh -l
+if [ "$INPUT_ACTION" == "close" ]; then
+     dotnet StaticSitesClient.dll $INPUT_ACTION
+     exit 0
+ fi
+
 SHOULD_BUILD_FUNCTION=true
 
 cd $GITHUB_WORKSPACE
@@ -32,7 +37,7 @@ if [ SHOULD_BUILD_FUNCTION ]; then
     if [ 0 -eq $? ]; then
         echo "\e[32mSuccessfully built api folder\e[0m"
     else
-        echo "\e[31mFailed to build Azure function\e[0m"
+        echo "\e[31mFailed to build api folder\e[0m"
         exit 1
     fi;
 fi
