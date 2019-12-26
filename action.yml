@@ -20,11 +20,11 @@ inputs:
   app_artifact_location:
     description: 'Location of App Artifacts'
     required: false
-    default: ''
+    default: '.'
   api_artifact_location:
     description: 'Location of Api Artifacts'
     required: false
-    default: ''
+    default: '.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
