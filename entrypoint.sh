@@ -1,6 +1,6 @@
 #!/bin/sh -l
 if [ "$INPUT_ACTION" == "close" ]; then
-     dotnet StaticSitesClient.dll $INPUT_ACTION
+     dotnet StaticSitesClient.dll $INPUT_ACTION --verbose=true
      exit 0
  fi
 
@@ -45,7 +45,7 @@ fi
 cd /bin/staticsites/
 
 if [ SHOULD_BUILD_FUNCTION ]; then
-     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --api="/github/staticsitesoutput/api/$INPUT_APP_BUILD_OUTPUT_LOCATION"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --api="/github/staticsitesoutput/api/$INPUT_APP_BUILD_OUTPUT_LOCATION" --verbose=true
 else
-     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --verbose=true
 fi;
