@@ -45,7 +45,7 @@ fi
 cd /bin/staticsites/
 
 if [ SHOULD_BUILD_FUNCTION ]; then
-     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --api="/github/staticsitesoutput/api/$INPUT_APP_BUILD_OUTPUT_LOCATION"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --api="/github/staticsitesoutput/api/$INPUT_APP_BUILD_OUTPUT_LOCATION" --oryxEnabled=true
 else
-     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION"
+     dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --oryxEnabled=true
 fi;
