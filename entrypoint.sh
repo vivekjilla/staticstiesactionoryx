@@ -48,3 +48,4 @@ if [ SHOULD_BUILD_FUNCTION ]; then
      dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION" --api="/github/staticsitesoutput/api/$INPUT_APP_BUILD_OUTPUT_LOCATION"
 else
      dotnet StaticSitesClient.dll $INPUT_ACTION --app="/github/staticsitesoutput/app/$INPUT_APP_ARTIFACT_LOCATION"
+fi;
